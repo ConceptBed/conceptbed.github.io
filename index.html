@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Large-scale concept learning evaluations for personalized text-to-image diffusion models.">
+  <meta name="keywords" content="ConceptBed, Concept Learning, Diffusion Models, Textual Inversion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConceptBed</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <!-- <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="index.html">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">ConceptBed <p style="font-size:xx-large;">Evaluating Concept
+                Learning Abilities of
+                Text-to-Image
+                Diffusion Models</p>
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://maitreyapatel.com">Maitreya Patel</a>,</span>
+              <span class="author-block">
+                <a href="https://www.tejasgokhale.com/">Tejas Gokhale</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.public.asu.edu/~cbaral/">Chitta Baral</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://yezhouyang.engineering.asu.edu/">Yezhou Yang</a>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              Arizona State University
+            </div>
+            <br>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper (Under Review)</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (soon!)</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="data.html" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+                </span>
+                <!-- Online Dataset Bowese. -->
+                <span class="link-block">
+                  <a href="explorer.html" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Results Explorer</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="is-centered has-text-centered">
+        <div class="hero-body">
+          <img src="./static/images/database_overview.png" width="60%">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>The ability to understand visual concepts and being able to replicate, and compose these concepts from
+              images is a central goal for computer vision.
+              Recent advances in text-to-image (T2I) generative models have resulted in high levels of photorealism and
+              have shown promise in understanding visual concepts.
+              However, the evaluation of T2I models has focused on photorealism and qualitative evaluation of visual
+              concepts.
+              The goal of this work is to quantify the ability of T2I models in learning and synthesizing visual
+              concepts.
+              Towards this goal, we introduce <b style="font-size: large;">ConceptBed</b>, a large-scale dataset that
+              consists of 284 unique visual concepts, more than 5000 unique concept compositions, and more than 33000
+              composite text prompts.
+              This dataset allows us to evaluate the ability of T2I models to learn and generate visual concepts.
+              We propose $\Delta \mathcal{U}$, an uncertainty-based evaluation metric that uses the confidence of oracle
+              concept classifiers to quantify the alignment between concepts generated by T2I generators and concepts
+              contained in ground truth images.
+              We evaluate visual concepts that are either objects, attributes, or styles, and also evaluate four
+              dimensions of compositionality: counting, attributes, relations, and actions.
+              Our human study shows that $\Delta \mathcal{U}$ is highly correlated with human understanding of concepts
+              thereby demonstrating the effectiveness of our approach.
+              Our results show that there exists a trade-off between learning the concepts and preserving the
+              compositionality and none of the prior works perform satisfactorily.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="./static/images/qualitative_example.png">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- <section class="section">
+    <div class="container is-max-desktop">
+
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h2 class="title is-3">Related Links</h2>
+
+      <div class="content has-text-justified">
+        <p>
+          Some of the excellent related works benchmarked in this works are available online.
+        </p>
+        <p>
+          We further provide a single GitHub repository with the wide Collections of Personalized Text-to-Image
+          Diffusion
+          Modeling:
+          <br /> <a href="#">
+            Learning-to-Learn the Concepts</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </section> -->
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{patel2023conceptbed,
+  author    = {Patel, Maitreya and Gokhale, Tejas and Baral, Chitta and Yang, Yezhou},
+  title     = {ConceptBed: Evaluating Concept Learning Abilities of Text-to-Image Diffusion Models},
+  year      = {2023},
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="#">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="#" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="content">
+          <p>
+            This website template is inspired from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+            and
+            modified by <a href="https://maitreyapatel.com">Maitreya Patel</a>.
+            <br>
+            The website source code is available at: <a href="https://github.com/ConceptBed/ConceptBed">GitHub</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
