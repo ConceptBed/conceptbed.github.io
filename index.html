@@ -42,6 +42,59 @@
     src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
 
+  <style>
+    #project-previews {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+      padding: 20px;
+    }
+
+    .project {
+      width: 300px;
+      /* Adjust as needed */
+      height: 320px;
+      /* Adjust as needed */
+      border: 1px solid #ddd;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .project img {
+      width: 100%;
+      /* Make image fill the container */
+      height: 200px;
+      /* Adjust height as needed */
+      object-fit: cover;
+    }
+
+    .project h3,
+    .project p {
+      margin: 5px 0;
+    }
+
+    /* Hover effect */
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #project-previews a.project {
+      text-decoration: none;
+      /* Remove underline from links */
+      color: inherit;
+      /* Use the parent's text color */
+      display: block;
+      /* Make the anchor tag behave like a block element */
+    }
+
+    #project-previews a.project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -61,6 +114,19 @@
             <i class="fas fa-home"></i>
           </span>
         </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://eclipse-t2i.vercel.app/">
+              ECLIPSE (Efficient T2I)
+            </a>
+            <a class="navbar-item" href="https://wouaf.vercel.app">
+              WOUAF (Secure T2I)
+            </a>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -204,7 +270,7 @@
   </section>
 
 
-  <section class="section" id="BibTeX">
+  <section class="footer" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{patel2023conceptbed,
@@ -213,6 +279,30 @@
   year      = {2023},
 }</code></pre>
     </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Relevant Projects</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="project-previews">
+    <a href="https://eclipse-t2i.vercel.app" class="project">
+      <img src="./static/images/eclipse.png">
+      <h3 class="title is-5">ECLIPSE</h3>
+      <p>A Resource-Efficient Text-to-Image Prior for Image Generations</p>
+    </a>
+
+    <a href="https://wouaf.vercel.app/" class="project">
+      <img src="./static/images/wouaf.png">
+      <h3 class="title is-5">WOUAF</h3>
+      <p>Weight Modulation for User Attribution and Fingerprinting in T2I Models. </p>
+    </a>
   </section>
 
 
